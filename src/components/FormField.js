@@ -1,6 +1,6 @@
 
 export const FormField = ({ label, id, type, placeholder, value, onChange, disabled }) => (
-    <div className="mb-4">
+    <div className="mb-4  p-2 rounded-lg">
       <label htmlFor={id} className="block text-gray-700 font-bold mb-2">
         {label}
       </label>
@@ -8,7 +8,7 @@ export const FormField = ({ label, id, type, placeholder, value, onChange, disab
         type={type}
         id={id}
         name={id}
-        className="w-full p-2 border border-gray-300 rounded"
+        className="w-full py-1 outline-none border-b-2 rounded"
         placeholder={placeholder}
         value={value}
         onChange={onChange}

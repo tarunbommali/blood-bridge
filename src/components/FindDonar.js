@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { FormSelect } from "../components/FormSelect";
-import { FormField } from "../components/FormField";
+import { FormSelect } from "./FormSelect";
+import { FormField } from "./FormField";
 import { testData } from "../helper/testData";
 
-const FindDonor = () => {
+
+const FindDonor = ({onChangeStatus}) => {
   const [pincode, setPincode] = useState("");
   const [selectedCountry] = useState("India");
   const [selectedState, setSelectedState] = useState("");
@@ -69,20 +70,12 @@ const FindDonor = () => {
   };
 
   return (
-    <div className="flex justify-around">
-      <iframe
-        width="600"
-        height="315"
-        className="my-4"
-        src="https://www.youtube.com/embed/rTZdFd8gbCA?si=XoeMBMMTMub7G-6R"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      ></iframe>
-
-      <div className="mx-4 my-6 w-[700px]">
+    <div className="flex justify-center border bg-white mx-4 my-6 px-2 py-6 rounded-lg border-[#cfd8dc]">
+     
+      <div className="w-[90%] md:w-[400px]">
+        <div className="flex text-[11px] ">
+          <p onClick={onChangeStatus} className="text-red-500 cursor-pointer">Register as Donar</p>  / <p className="font-semibold">Find Donar</p>
+        </div>
         <h1 className="text-3xl font-bold text-red-600 text-center mb-6">
           Find Donor
         </h1>

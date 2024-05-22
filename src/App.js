@@ -1,18 +1,8 @@
 import React from "react";
 import { Outlet, createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./routes/Home";
-import Header from "./components/Header";
-import Registration from "./routes/Registration";
-import FindDonar from "./routes/FindDonar";
 
-const AppLayout = () => {
-  return (
-    <div>
-      <Header/>
-      <Outlet />
-    </div>
-  );
-};
+const AppLayout = () => <Outlet/>
 
 const routes = [
   {
@@ -23,14 +13,6 @@ const routes = [
         path: "/",
         element: <Home />,
       },
-      {
-        path: "/registration",
-        element: <Registration/>
-      },
-      {
-        path:"/find-donar",
-        element: <FindDonar/>
-      }
     ],
   },
 ];
